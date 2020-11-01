@@ -1,5 +1,6 @@
 package com.example.taskmanager.service;
 
+import com.example.taskmanager.model.User;
 import com.example.taskmanager.repository.TaskRepository;
 import com.example.taskmanager.model.Task;
 import org.springframework.stereotype.Service;
@@ -28,5 +29,10 @@ public class TaskServiceImpl implements TaskService {
     @Override
     public void deleteById(Long id) {
         taskRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Task> findAllByUser(User user) {
+        return taskRepository.findAllByUser(user);
     }
 }

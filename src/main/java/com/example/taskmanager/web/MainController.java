@@ -39,4 +39,10 @@ public class MainController {
 		model.addAttribute("tasks", tasks);
 		return "index";
 	}
+
+	@GetMapping("/snake")
+	public String snake(){
+		return "snake";
+	}
+
 }
